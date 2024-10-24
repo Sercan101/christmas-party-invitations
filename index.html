@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Party Invitation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Christmas Party!</h1>
+        <p id="name"></p>
+        <p id="table"></p>
+        <p id="accompanied"></p>
+    </div>
+    <script>
+        // JavaScript, um Informationen aus der URL zu extrahieren
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const table = urlParams.get('table');
+        const accompanied = urlParams.get('accompanied');
+
+        document.getElementById('name').innerText = `Hello, ${name}`;
+        document.getElementById('table').innerText = `Your Table Number is: ${table}`;
+        document.getElementById('accompanied').innerText = `Accompanied: ${accompanied}`;
+    </script>
+</body>
+</html>
